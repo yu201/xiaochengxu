@@ -14,5 +14,8 @@
 <view>
   <text>git测试</text>
 </view>
+<view>
+  <text>分支1</text>
+</view>
 
 
