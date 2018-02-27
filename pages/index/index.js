@@ -3,6 +3,10 @@
 const app = getApp()
 
 Page({
+  onReady: function (e) {
+    // 使用 wx.createAudioContext 获取 audio 上下文 context
+    this.audioCtx = wx.createAudioContext('myAudio')
+  },
   data: {
     motto: 'Hello World',
     userInfo: {},
@@ -14,6 +18,23 @@ Page({
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },
+  godetile: function() {
+    wx.navigateTo({
+      url: '../detile/detile'
+    })
+  },
+  audioPlay: function () {
+    this.audioCtx.play()
+  },
+  audioPause: function () {
+    this.audioCtx.pause()
+  },
+  audio14: function () {
+    this.audioCtx.seek(14)
+  },
+  audioStart: function () {
+    this.audioCtx.seek(0)
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
