@@ -11,5 +11,8 @@
     <text bindtap="godetile" class="user-motto">{{motto}}</text>
   </view>
 </view>
+<view>
+  <text>git测试</text>
+</view>
 
 
